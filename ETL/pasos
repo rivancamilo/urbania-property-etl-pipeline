@@ -1,0 +1,18 @@
+Contruimos las imagen:
+docker build -t python-etl:latest .
+
+
+ejecutamos la imgaen
+  docker run --rm `
+  --network urbania-property-etl-pipeline_airflow_network `
+  -e DB_HOST=mysql `
+  -e DB_USER=root `
+  -e DB_PASSWORD=rootpassword `
+  -e DB_NAME=bdUrbania `
+  -e DB_PORT=3306 `
+  -e XML_FILE=/app/source/feed.xml `
+  -v "${PWD}/source:/app/source" `
+  python-etl:latest
+
+
+  
