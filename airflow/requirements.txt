@@ -1,0 +1,10 @@
+# Dependencias para Apache Airflow
+# NOTA: No incluir apache-airflow ni apache-airflow-providers-mysql aquí
+# ya que se instalan directamente en el Dockerfile
+
+# Manipulación de datos
+pandas==2.1.4
+numpy==1.26.3
+
+# Utilidades
+python-dotenv==1.0.0
